@@ -1,0 +1,20 @@
+name: My frist workflow
+
+on: push
+
+jobs:
+    ascii_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+
+        - name: install cowsay program
+          run:  sudo apt-get install cowsay -y
+          
+        - name: list repo file
+          run: ls -ltra
+
+        - name: executing shell script
+          run: ./ascii-script.sh
+
