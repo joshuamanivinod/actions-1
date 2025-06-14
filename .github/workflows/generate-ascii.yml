@@ -20,7 +20,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: sleep for 10 sec
-          uses: sleep 10
+          run: sleep 10
 
         - name: test file exists
           run: grep -i "dragon" dragon.txt
